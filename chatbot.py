@@ -1,7 +1,6 @@
 import streamlit as st
 from gtts import gTTS
 import speech_recognition as sr
-from streamlit_webrtc import webrtc_streamer, AudioProcessorBase
 import os
 
 # Sidebar for extra information and controls
@@ -25,7 +24,6 @@ if st.button("Send"):
 # Adding voice input feature (using Speech Recognition)
 st.markdown("### You can also speak to the assistant :microphone:")
 if st.button("Start Speaking"):
-    # Set up recognizer and microphone
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         st.write("Listening for your speech...")
